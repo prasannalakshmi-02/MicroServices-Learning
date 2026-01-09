@@ -18,6 +18,13 @@ This is a Mono-repo organized by architectural concepts. Each folder represents 
     * **Overview:** A foundational project establishing communication between an `Order-Service` and a `Product-Service`.
     * **Key Learnings:** * Implementing HTTP communication using `RestTemplate`.
         * Handling service downtime gracefully (Resilience) by catching connection errors and returning user-friendly `503` responses.
+     
+* **`02-Rest-Client-Migration/`**
+  * **Focus:** Modernization & Professional Error Handling.
+  * **Key Changes:**
+    * Migrated from `RestTemplate` to the modern **`RestClient`** (Spring Boot 3.2).
+    * Implemented **Global Exception Handling** using `@RestControllerAdvice` to return clean JSON error responses.
+    * Added **Timeouts** (3 seconds) to prevent the system from hanging if a service is slow.
 
 ---
 
