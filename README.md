@@ -25,6 +25,15 @@ This is a Mono-repo organized by architectural concepts. Each folder represents 
     * Migrated from `RestTemplate` to the modern **`RestClient`** (Spring Boot 3.2).
     * Implemented **Global Exception Handling** using `@RestControllerAdvice` to return clean JSON error responses.
     * Added **Timeouts** (3 seconds) to prevent the system from hanging if a service is slow.
+   
+* **`03-OpenFeign-Client/`**
+    * **Focus:** Declarative Communication (Spring Cloud OpenFeign).
+    * **Overview:** Replaced imperative HTTP code with declarative interfaces (`@FeignClient`) to simplify service-to-service communication.
+    * **Key Learnings:**
+        * Abstracting HTTP calls using Interfaces and Dynamic Proxies.
+        * Handling Feign-specific exceptions (`RetryableException`) globally.
+        * Understanding Point-to-Point communication (without Service Discovery).
+
 
 ---
 
