@@ -33,6 +33,14 @@ This is a Mono-repo organized by architectural concepts. Each folder represents 
         * Abstracting HTTP calls using Interfaces and Dynamic Proxies.
         * Handling Feign-specific exceptions (`RetryableException`) globally.
         * Understanding Point-to-Point communication (without Service Discovery).
+     
+* **`04-Service-Discovery-Eureka/`**
+    * **Focus:** Service Discovery & Client-Side Load Balancing.
+    * **Overview:** Implemented **Netflix Eureka** to eliminate hardcoded URLs and enable dynamic scaling.
+    * **Key Learnings:**
+        * **Registry Pattern:** Built a Eureka Server ("Phonebook") where services automatically register themselves.
+        * **Dynamic Scaling:** Ran multiple instances of `Product-Service` on different ports (`8081`, `8082`).
+        * **Client-Side Load Balancing:** Configured Feign Client to automatically distribute traffic (Round Robin) across available service instances.
 
 
 ---
